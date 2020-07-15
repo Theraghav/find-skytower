@@ -1,0 +1,24 @@
+{
+  "name": "find-skytower",
+  "version": "1.0.0",
+  "description": "First ar app to recognise real-world objects and mark them ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u001b[A\u001b[D\u001b[D\u001b[Djasmine\u001b[B\u001b[D\u001b[D\u001b[D\u001b[D"
+  },
+  "keywords": [
+    "AR",
+    "three.js"
+  ],
+  "type": "module",
+  "author": "AR",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}
