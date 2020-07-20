@@ -8,16 +8,29 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    <script type="application/javascript;charset=utf-8" src="index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </head>
 
 <body style="margin: 0; overflow: hidden;">
+    <div style="padding:10px 0 0 10px; background-color: aquamarine; opacity: 0.5;">
+        <div id='lat'>Latitude: </div>
+        <div id='long'>Longitude: </div>
+        <div id='noOfBuildings'># of buildings:</div>
+    </div>
     <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;">
-        <a-image src="map-marker.png" look-at="[gps-camera]" gps-entity-place="latitude: -36.848360; longitude: 174.762175;" scale="100 100 100" position="0 100 0" ></a-image>
-        <a-text value="SkyTower" look-at="[gps-camera]" gps-entity-place="latitude: -36.848360; longitude: 174.762175;" color="yellow" scale="50 50 50" position="0 0 0"></a-text>
-        <a-text value="AIG" look-at="[gps-camera]" gps-entity-place="latitude: -36.847046; longitude: 174.767915;" color="red" scale="100 100 100" position="0 100 0"></a-text>
-        <a-text value="Te Atatu" look-at="[gps-camera]" gps-entity-place="latitude: -36.843623; longitude: 174.651310;" color="green" scale="100 100 100" position="0 100 0"></a-text>
-        <a-camera gps-camera rotation-reader> </a-camera>
+        <a-image src="map-marker.png" look-at="[gps-camera]"
+            gps-entity-place="latitude: -36.848360; longitude: 174.762175;" scale="100 100 100" position="0 100 0">
+        </a-image>
+        <a-text value="SkyTower" markerhandler look-at="[gps-camera]" gps-entity-place="latitude: -36.848360; longitude: 174.762175;"
+            color="yellow" scale="50 50 50" position="0 200 0" maxDistance="1000"></a-text>
+        <a-text value="AIG" gps-entity-place-loaded="onEntityLoaded()" look-at="[gps-camera]" gps-entity-place="latitude: -36.847046; longitude: 174.767915;"
+            color="red" scale="100 100 100" position="0 100 0"></a-text>
+        <a-text value="Te Atatu" markerhandler look-at="[gps-camera]" gps-entity-place="latitude: -36.843623; longitude: 174.651310;"
+            color="green" scale="100 100 100" position="0 100 0"></a-text>
+        <a-text value="China Contruction" markerhandler look-at="[gps-camera]"
+            gps-entity-place="latitude: -36.845782; longitude: 174.769705;" color="yellow" scale="50 50 50"
+            position="0 100 0"></a-text>
+        <a-camera gps-camera gps-camera-update-position="onPositionUpdate()" rotation-reader> </a-camera>
     </a-scene>
 </body>
 
