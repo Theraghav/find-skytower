@@ -1,3 +1,3 @@
 # find-skytower
 
-Deployed on https://permissible-tricks.surge.sh
+Deployed on https://permissible-trick.surge.sh
